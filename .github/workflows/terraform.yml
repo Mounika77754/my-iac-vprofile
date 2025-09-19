@@ -12,7 +12,7 @@ on:
       - main
     paths:
       - 'terraform/**'
-
+#
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_AWS }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.SEC_ACCESS_KEY_AWS }}
@@ -24,7 +24,7 @@ jobs:
   terraform:
     name: "Terraform Apply"
     runs-on: ubuntu-latest
-    defaults:              # typo fixed: should be `defaults`, not `default`
+    defaults:              #ould be `defaults`, not `default`
       run:
         shell: bash
         working-directory: ./terraform
